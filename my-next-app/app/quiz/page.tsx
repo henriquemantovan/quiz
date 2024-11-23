@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const questions = [
   {
@@ -32,7 +32,7 @@ const questions = [
       { imgSrc: "/images/b.png", alt: "Frango xadrez com amendoim" },
       { imgSrc: "/images/c.png", alt: "shishi" },
       { imgSrc: "/images/d.png", alt: "leite com mel" },
-    ] as ({ imgSrc: string; alt: string } | string)[], // Corrigindo o tipo das opções
+    ] as ({ imgSrc: string; alt: string } | string)[],
   },
   {
     id: 6,
@@ -45,24 +45,18 @@ const QuizPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [quizCompleted, setQuizCompleted] = useState(false);
-  const router = useRouter();
 
   const handleAnswer = (index: number) => {
-    setSelectedOption(index); // Marca a opção selecionada
+    setSelectedOption(index);
 
-    // Avança para a próxima pergunta ou marca o quiz como completado
     if (currentQuestionIndex < questions.length - 1) {
       setTimeout(() => {
-        setCurrentQuestionIndex(currentQuestionIndex + 1); // Atualiza o índice da pergunta
-        setSelectedOption(null); // Reseta a opção selecionada para a próxima pergunta
-      }, 100); // Espera meio segundo antes de passar para a próxima pergunta
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+        setSelectedOption(null);
+      }, 100);
     } else {
-      setQuizCompleted(true); // Se for a última pergunta, marca o quiz como concluído
+      setQuizCompleted(true);
     }
-  };
-
-  const handleDiscoverPrincess = () => {
-    router.push("/rapunzel"); 
   };
 
   return (
@@ -76,9 +70,9 @@ const QuizPage = () => {
                 <label
                   key={index}
                   className={`option ${selectedOption === index ? "selected" : ""}`}
-                  onClick={() => handleAnswer(index)} // Avança automaticamente ao clicar
+                  onClick={() => handleAnswer(index)}
                 >
-                  {typeof option === "object" ? ( // Verifica se é uma imagem
+                  {typeof option === "object" ? (
                     <img
                       src={option.imgSrc}
                       alt={option.alt}
@@ -104,12 +98,11 @@ const QuizPage = () => {
         ) : (
           <div className="quiz-completed">
             <h2 className="quiz-title">Você terminou o quiz!</h2>
-            <button
-              onClick={handleDiscoverPrincess}
-              className="discover-button"
-            >
-              Descubra a Princesa
-            </button>
+            <Link href="/rapunzel">
+              <button className="discover-button">
+                Descubra a Princesa
+              </button>
+            </Link>
           </div>
         )}
       </div>

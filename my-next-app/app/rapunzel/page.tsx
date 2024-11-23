@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 
 const PrincessPage = () => {
   const [showSecondImage, setShowSecondImage] = useState(false);
@@ -15,7 +14,7 @@ const PrincessPage = () => {
       <div className="first-screen">
         {!showSecondImage ? (
           <>
-            <Image
+            <img
               src="/images/rapunzel-princess.gif" // Substitua com o caminho para a imagem da primeira princesa
               alt="Primeira Princesa"
               width={300}  // Ajuste o tamanho da imagem
@@ -32,7 +31,7 @@ const PrincessPage = () => {
           </>
         ) : (
           <>
-            <Image
+            <img
               src="/images/yui.png" // Substitua com o caminho para a imagem da segunda princesa
               alt="Julia Maria, princesa do Carrão"
               width={300} // Ajuste o tamanho da imagem
