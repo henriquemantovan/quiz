@@ -1,4 +1,3 @@
-"use client"; // Necessário para habilitar interatividade
 
 import React from 'react';
 import Link from 'next/link';
@@ -10,7 +9,7 @@ const QuizPage = () => {
       <p className="quiz-description">
         Responda o exame ocupacional e veja qual personagem combina mais com a sua personalidade.
       </p>
-      <Link href="/quiz">
+      <Link href="/quizo">
         <button className="quiz-startButton">
           Iniciar Quiz
         </button>
