@@ -27,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('fundo/princess-quiz-bg.jpg') no-repeat center center;
+  background: url('/images/princess-quiz-bg.jpg') no-repeat center center;
   background-size: cover;
   font-family: 'Arial', sans-serif;
   text-align: center;
