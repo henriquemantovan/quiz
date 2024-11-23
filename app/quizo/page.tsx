@@ -7,7 +7,7 @@ const questions = [
   {
     id: 1,
     question: "Qual é a sua maior qualidade?",
-    options: ["Coragem", "Bondade", "Inteligência", "Independência"],
+    options: ["Coragem", "Bondade", "Inteligência", "Beleza"],
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const questions = [
   },
   {
     id: 5,
-    question: "O que você faria se encontrasse um dragão?",
+    question: "Qual sua comida favorita?",
     options: [
       { imgSrc: "/images/a.png", alt: "Salchica" },
       { imgSrc: "/images/b.png", alt: "Frango xadrez com amendoim" },

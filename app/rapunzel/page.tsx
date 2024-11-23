@@ -23,12 +23,12 @@ const PrincessPage = () => {
               className="princess-image"
               priority
             />
-            <p className="princess-text">Você é a RAPUNZEL!!! A segunda princesa mais bonita</p>
+            <p className="princess-text">Você é a RAPUNZEL!!! A segunda princesa mais bonita da Disney</p>
             <button
               onClick={handleDiscoverMore}
               className="discover-button"
             >
-              Descubra a primeira
+              Clique aqui e descubra a primeira
             </button>
           </>
         ) : (
