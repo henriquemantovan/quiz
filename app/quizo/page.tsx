@@ -11,8 +11,8 @@ const questions = [
   },
   {
     id: 2,
-    question: "Qual seria o seu lugar ideal para morar?",
-    options: ["Um castelo", "Na floresta", "No mar", "Na cidade"],
+    question: "Que aparição artistica esteve na Nostalgia?",
+    options: ["System of a down", "MC Lan", "MC Lan (novamente)", "Michael Jackson "],
   },
   {
     id: 3,
