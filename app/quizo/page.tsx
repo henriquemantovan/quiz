@@ -11,7 +11,7 @@ const questions = [
   },
   {
     id: 2,
-    question: "Que aparição artistica esteve na Nostalgia?",
+    question: "Que aparição artistica não esteve na Nostalgia?",
     options: ["System of a down", "MC Lan", "MC Lan (novamente)", "Michael Jackson "],
   },
   {
