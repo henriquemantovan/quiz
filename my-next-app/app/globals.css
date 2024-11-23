@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos do Quiz */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('fundo/princess-quiz-bg.jpg') no-repeat center center;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.quiz-title {
+  font-size: 2.5rem;
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+.quiz-description {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.quiz-startButton {
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-startButton:hover {
+  background-color: #b22e6d;
+  transform: scale(1.05);
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  transition: border-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option:hover {
+  border-color: #d63384;
+}
+
+.option.selected {
+  border-color: #d63384;
+  background-color: #ffe1f8;
+}
+
+.option img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.option span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.hidden-input {
+  display: none;
+}
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.image-container {
+  width: 170px; /* Aumentei o tamanho da largura */
+  height: 170px; /* Aumentei o tamanho da altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discover-button {
+  background-color: #d63384; /* Cor de fundo */
+  color: #fff; /* Texto branco */
+  border: none; /* Remove bordas */
+  padding: 20px 40px; /* Tamanho maior */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  border-radius: 50px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de pointer para indicar que é clicável */
+  transition: all 0.3s ease; /* Transição suave para os efeitos de hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 200px; /* Largura fixa do botão */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+.discover-button:hover {
+  background-color: #b22e6d; /* Cor de fundo mais escura no hover */
+  transform: scale(1.05); /* Efeito de aumentar o botão */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais forte */
+}
+
+.discover-button:active {
+  transform: scale(0.98); /* Efeito de clicar (apertar) */
+}
+
+.quiz-container {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 100vh; /* Ensures the container takes up the full viewport height */
+  text-align: center; /* Centers the text horizontally */
+  background-color: #f0f8ff; /* Optional: sets a background color */
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column; /* Stacks the image and text vertically */
+  justify-content: center; /* Vertically center the content inside first-screen */
+  align-items: center; /* Horizontally center the content inside first-screen */
+}
+
+.princess-text {
+  font-size: 2rem; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+  color: #ff66b2; /* Add a nice pink color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to make it pop */
+  margin-top: 15px; /* Add some space above the text */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Choose a playful font */
+}
+
+.princess-image {
+  border-radius: 50%; /* Make the images circular */
+  border: 4px solid #ff66b2; /* Add a pink border around the image */
+  margin-bottom: 20px; /* Add some space below the image */
+}
+
+
