@@ -42,6 +42,19 @@ const PrincessPage = () => {
               priority
             />
             <p className="princess-text">Julia Maria! A princesa do Carrão</p>
+            <input
+            type="text"
+            placeholder="Se você gostou do resultado digite seu CPF:"
+            style={{
+              marginTop: "20px",
+              width: "80%",
+              padding: "10px",
+              fontSize: "1.2rem",
+              border: "2px solid #f17e98",
+              borderRadius: "8px",
+              textAlign: "center",
+            }}
+          />
           </>
         )}
       </div>
